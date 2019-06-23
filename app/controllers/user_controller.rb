@@ -1,6 +1,9 @@
 class UserController < ApplicationController
   before_action :authorize_request, except: :create
 
+  # We may want to scope users to groups, so we can make sure that users can only access certain things
+  # If we do that, it would be easier to assign a user as also a topic for direct peer to peer connections
+
   # GET /users
   def index
     users = User.all

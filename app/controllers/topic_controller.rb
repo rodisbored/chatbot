@@ -8,6 +8,7 @@ class TopicController < ApplicationController
   end
 
   # POST /groups/:group_id/topics
+  # Topics can be used to store both public chats and peer to peer
   def create
     topic = Topic.find_or_create(topic_params)
     render json: topic
