@@ -31,5 +31,11 @@ module Chatbot
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Always allow these params in strong parameters
+    config.action_controller.always_permitted_parameters =
+      %w(controller action format page per_page search locale utf8 _method authenticity_token id)
+
+    config.autoload_paths += %W[#{config.root}/lib]
   end
 end
