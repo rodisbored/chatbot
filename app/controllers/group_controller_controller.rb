@@ -1,15 +1,17 @@
 class GroupControllerController < ApplicationController
   def index
-    # Definitely want to have some authorization here
-    @groups = Group.all
+    groups = Group.all
+    render json: groups
   end
 
   def create
-    @group = Group.create(group_params)
+    group = Group.create(group_params)
+    render json: group
   end
 
   def update
-    @group = Group.update(group_params)
+    group = Group.update(group_params)
+    render json: group
   end
 
   private

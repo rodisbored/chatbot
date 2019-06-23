@@ -1,18 +1,22 @@
 class UserControllerController < ApplicationController
   def index
-    @users = User.all
+    users = User.all
+    render json: users
   end
 
   def create
-    @user = User.create(user_params)
+    user = User.create(user_params)
+    render json: user
   end
 
   def show
-    @user = User.find(id: params[:id])
+    user = User.find(id: params[:id])
+    render json: user
   end
 
   def update
-    @user = User.update(user_params)
+    user = User.update(user_params)
+    render json: user
   end
 
   private
