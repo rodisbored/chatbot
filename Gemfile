@@ -7,7 +7,7 @@ gem 'bcrypt', '~> 3.1'
 gem 'fast_jsonapi', '~> 1.5'
 gem 'jwt', '~> 2.2'
 gem 'mysql2', '~> 0.5'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 gem 'rack-cors', '~> 1.0'
 
 
